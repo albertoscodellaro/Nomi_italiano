@@ -57,7 +57,37 @@ la capofamiglia|capofamiglia|capifamiglia|capofamiglie
 il capolavoro|capolavori|capilavoro|capolavoro
 il capoluogo|capoluoghi|capiluogo|capoluogi
 il pescespada|pescispada|pescespade|pescispade
-la cassaforte|casseforti|cassaforti|casseforte`.split('\n').map(s=>'p|'+s);
+la cassaforte|casseforti|cassaforti|casseforte
+il medico|medici|medichi|medice
+il banco|banchi|banci|banche
+il fungo|funghi|fungi|funge
+il luogo|luoghi|luogi|luoge
+il nemico|nemici|nemichi|nemice
+l'asparago|asparagi|asparaghi|asparage
+il teologo|teologi|teologhi|teologe
+il dialogo|dialoghi|dialogi|dialoge
+il lago|laghi|lagi|lage
+la banca|banche|banci|bance
+la barca|barche|barce|barchi
+la ciliegia|ciliegie|ciliege|ciliegi
+l'arancia|arance|arancie|aranci
+la frangia|frange|frangie|frangi
+la spiaggia|spiagge|spiaggie|spiaggi
+la goccia|gocce|goccie|gocci
+la roccia|rocce|roccie|rocci
+la ruga|rughe|ruge|rughi
+il bacio|baci|bacii|bachi
+lo specchio|specchi|specchii|specche
+lo zio|zii|zi|zie
+l'uomo|uomini|uomi|uomoi
+il bue|buoi|bui|bue
+l'uovo|uova|uovi|uove
+la mano|mani|mane|manie
+il paio|paia|pai|paii
+la radio|radio|radii|radie
+il film|film|films|filme
+il gorilla|gorilla|gorille|gorilli
+la crisi|crisi|crise|crisii`.split('\n').map(s=>'p|'+s);
 const F=`il professore|professoressa|professora|professoressi
 lo studente|studentessa|studenta|studentrice
 il ministro|ministra|ministressa|ministrice
@@ -79,7 +109,27 @@ il magistrato|magistrata|magistratessa|magistratrice
 il cancelliere|cancelliera|cancellieressa|cancellerica
 il finanziere|finanziera|finanzieressa|finanzia
 l'ingegnere|ingegnera|ingegneressa|ingegnerea
-l'usciere|usciera|uscieressa|uscia`.split('\n').map(s=>'f|'+s);
+l'usciere|usciera|uscieressa|uscia
+il pittore|pittrice|pittora|pittoressa
+lo scultore|scultrice|scultora|scultoressa
+l'autore|autrice|autora|autoressa
+l'attore|attrice|attora|attoressa
+il direttore|direttrice|direttora|direttoressa
+il conduttore|conduttrice|conduttora|conduttoressa
+il re|regina|rea|ressa
+il principe|principessa|principa|principia
+il conte|contessa|conta|contia
+il barone|baronessa|barona|baronia
+l'elefante|elefantessa|elefanta|elefantina
+il dio|dea|dia|diessa
+l'eroe|eroina|eroessa|erea
+lo zio|zia|ziessa|zioa
+il gallo|gallina|galla|gallessa
+il marito|moglie|marita|maritessa
+il fratello|sorella|fratella|fratellessa
+l'imperatore|imperatrice|imperatora|imperatoressa
+il campione|campionessa|campiona|campionia
+l'oste|ostessa|osta|ostia`.split('\n').map(s=>'f|'+s);
 quiz({pools:{Plurale:P,Femminile:F,Misto:[...P,...F]},make:s=>{const[t,w,a,...e]=s.split('|');
 return{q:(t=='p'?'Plurale di':'Femminile di')+' «<b>'+w+'</b>»',g:[{o:sh([a,...e]),a}]}}})
 </script></body></html>
