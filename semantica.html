@@ -1,0 +1,33 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>Rapporti tra parole</title></head><body><main><a href="index.html">← Menu</a><h1>Rapporti tra parole</h1><p class="s">Scegli che rapporto c'è tra la prima parola e la seconda.</p><div id="app"></div></main><script src="quiz.js"></script><script>
+const B=`baccano/chiasso/s
+pazzo/matto/s
+casa/abitazione/s
+bugia/menzogna/s
+paura/timore/s
+medico/dottore/s
+strada/via/s
+ricchezza/indigenza/a
+luce/buio/a
+vittoria/sconfitta/a
+giorno/notte/a
+pace/guerra/a
+amore/odio/a
+inizio/fine/a
+salita/discesa/a
+gioia/dolore/a
+fiore/rosa/h
+frutto/mela/h
+insetto/formica/h
+mammifero/delfino/h
+edificio/chiesa/h
+animale/cane/h
+veicolo/autobus/h
+gioiello/anello/h
+combustibile/benzina/h
+albero/quercia/h
+mobile/armadio/h
+latticini/formaggio/h`.split('\n');
+quiz({pools:{x:B},make:s=>{let[a,b,t]=s.split('/'),r={s:'sinonimo',a:'antonimo'}[t];
+if(t=='h'){if(Math.random()<.5)r='iperonimo';else{[a,b]=[b,a];r='iponimo'}}
+return{q:'«<b>'+a+'</b>» è … di «<b>'+b+'</b>»',g:[{o:['sinonimo','antonimo','iperonimo','iponimo'],a:r}]}}})
+</script></body></html>

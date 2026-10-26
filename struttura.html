@@ -1,0 +1,32 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>Primitivi, alterati, composti</title></head><body><main><a href="index.html">← Menu</a><h1>Primitivi, alterati o composti?</h1><p class="s">Indica la struttura di ciascun nome.</p><div id="app"></div></main><script src="quiz.js"></script><script>
+const B=`carne|p|nome semplice: radice + desinenza
+olio|p|nome semplice
+fiore|p|nome semplice
+corpo|p|nome semplice
+scarpa|p|nome semplice
+farmaco|p|nome semplice
+libro|p|nome semplice
+mare|p|nome semplice
+casetta|a|casa + -etta (diminutivo)
+scarpetta|a|scarpa + -etta (diminutivo)
+libretto|a|libro + -etto (diminutivo)
+gattino|a|gatto + -ino (diminutivo)
+cervellone|a|cervello + -one (accrescitivo)
+omone|a|uomo + -one (accrescitivo)
+ragazzaccio|a|ragazzo + -accio (peggiorativo)
+boccaccia|a|bocca + -accia (peggiorativo)
+poetastro|a|poeta + -astro (peggiorativo)
+brodaglia|a|brodo + -aglia (peggiorativo)
+asciugacapelli|c|asciuga + capelli
+girarrosto|c|gira + arrosto
+pescecane|c|pesce + cane
+caporeparto|c|capo + reparto
+coprivaso|c|copri + vaso
+ferrovia|c|ferro + via
+portafiori|c|porta + fiori
+dormiveglia|c|dormi + veglia
+calzascarpe|c|calza + scarpe
+grattacielo|c|gratta + cielo
+cavatappi|c|cava + tappi`.split('\n'),L={p:'primitivo',a:'alterato',c:'composto'};
+quiz({pools:{x:B},make:s=>{const[w,a,n]=s.split('|');return{q:'<b>'+w+'</b>',n,g:[{o:['primitivo','alterato','composto'],a:L[a]}]}}})
+</script></body></html>

@@ -1,0 +1,85 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>Plurale e femminile</title></head><body><main><a href="index.html">← Menu</a><h1>Plurale e femminile</h1><p class="s">Scegli la forma corretta.</p><div id="app"></div></main><script src="quiz.js"></script><script>
+const P=`il manico|manici|manichi|manice
+l'epilogo|epiloghi|epilogi|epilogha
+il gioco|giochi|gioci|giochii
+il blocco|blocchi|blocci|blocche
+il genio|geni|genii|genie
+il mango|manghi|mangi|mangii
+la valanga|valanghe|valange|valangi
+il brusio|brusii|brusi|brusie
+l'impiego|impieghi|impiegi|impiegii
+la toga|toghe|toge|togi
+il geologo|geologi|geologhi|geologe
+lo slargo|slarghi|slargi|slarge
+il transfuga|transfughi|transfugi|transfuge
+la fisarmonica|fisarmoniche|fisarmonice|fisarmonichi
+il monarca|monarchi|monarci|monarce
+il farmaco|farmaci|farmachi|farmace
+l'amico|amici|amichi|amicii
+il cigolio|cigolii|cigoli|cigolie
+l'occhio|occhi|occhii|occhie
+la camicia|camicie|camice|camicii
+la pronuncia|pronunce|pronuncie|pronunci
+l'allergia|allergie|allerge|allergi
+l'erbaccia|erbacce|erbaccie|erbacci
+la bugia|bugie|buge|bugii
+la reggia|regge|reggie|reggi
+la borraccia|borracce|borraccie|borracci
+la guancia|guance|guancie|guanci
+la valigia|valigie|valige|valigi
+la salsiccia|salsicce|salsiccie|salsicci
+la farmacia|farmacie|farmace|farmaci
+il re|re|ri|rei
+la città|città|citta|cittè
+il bar|bar|bari|bars
+la serie|serie|seri|serii
+l'analisi|analisi|analise|analesi
+l'auto|auto|aute|autoi
+il braccio (del corpo umano)|le braccia|i bracci|le bracce
+il braccio (di un lampadario)|i bracci|le braccia|i braccii
+il muro (della città, insieme di mura)|le mura|i muri|i mura
+il labbro (della bocca)|le labbra|i labbri|le labbre
+il ciglio (degli occhi)|le ciglia|i cigli|le cigle
+il membro (del corpo diplomatico)|i membri|le membra|i membre
+il manoscritto|manoscritti|manoscritte|manoscritto
+l'apriscatole|apriscatole|apriscatolo|apriscatoli
+il posacenere|posacenere|posaceneri|posacenero
+il purosangue|purosangue|purosangui|purisangue
+l'arcobaleno|arcobaleni|arcobalene|arcobalenoi
+il senzatetto|senzatetto|senzatetti|senzateti
+il portasapone|portasapone|portasaponi|portesapone
+lo scaldavivande|scaldavivande|scaldavivandi|scaldavivandai
+l'altoparlante|altoparlanti|altoparlante|altoparlanta
+il malvivente|malviventi|malvivente|malviventa
+il capostazione|capistazione|capostazioni|capistazioni
+il capoufficio (uomo)|capiufficio|capoufficio|capiuffici
+la capofamiglia|capofamiglia|capifamiglia|capofamiglie
+il capolavoro|capolavori|capilavoro|capolavoro
+il capoluogo|capoluoghi|capiluogo|capoluogi
+il pescespada|pescispada|pescespade|pescispade
+la cassaforte|casseforti|cassaforti|casseforte`.split('\n').map(s=>'p|'+s);
+const F=`il professore|professoressa|professora|professoressi
+lo studente|studentessa|studenta|studentrice
+il ministro|ministra|ministressa|ministrice
+il bagnino|bagnina|bagninessa|bagnine
+il chirurgo|chirurga|chirurgessa|chirurgia
+l'architetto|architetta|architettessa|architettrice
+il poeta|poetessa|poeta|poetrice
+il leone|leonessa|leona|leonesse
+il lettore|lettrice|lettora|lettoressa
+il questore|questora|questrice|questoressa
+il difensore|difenditrice|difensora|difensrice
+l'assessore|assessora|assessrice|assessoressa
+il nonno|nonna|nonnessa|nonne
+il cavallo|cavalla|cavallessa|cavalle
+il sindaco|sindaca|sindacessa|sindachessa
+il prefetto|prefetta|prefettessa|prefettrice
+il notaio|notaia|notaiessa|notaa
+il magistrato|magistrata|magistratessa|magistratrice
+il cancelliere|cancelliera|cancellieressa|cancellerica
+il finanziere|finanziera|finanzieressa|finanzia
+l'ingegnere|ingegnera|ingegneressa|ingegnerea
+l'usciere|usciera|uscieressa|uscia`.split('\n').map(s=>'f|'+s);
+quiz({pools:{Plurale:P,Femminile:F,Misto:[...P,...F]},make:s=>{const[t,w,a,...e]=s.split('|');
+return{q:(t=='p'?'Plurale di':'Femminile di')+' «<b>'+w+'</b>»',g:[{o:sh([a,...e]),a}]}}})
+</script></body></html>
