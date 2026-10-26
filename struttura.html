@@ -27,6 +27,56 @@ portafiori|c|porta + fiori
 dormiveglia|c|dormi + veglia
 calzascarpe|c|calza + scarpe
 grattacielo|c|gratta + cielo
-cavatappi|c|cava + tappi`.split('\n'),L={p:'primitivo',a:'alterato',c:'composto'};
+cavatappi|c|cava + tappi
+sole|p|nome semplice
+luna|p|nome semplice
+albero|p|nome semplice
+pane|p|nome semplice
+porta|p|nome semplice
+tavolo|p|nome semplice
+sedia|p|nome semplice
+cielo|p|nome semplice
+mano|p|nome semplice
+occhio|p|nome semplice
+gatto|p|nome semplice
+cane|p|nome semplice
+fiume|p|nome semplice
+monte|p|nome semplice
+stella|p|nome semplice
+vino|p|nome semplice
+librone|a|libro + -one (accrescitivo)
+casina|a|casa + -ina (diminutivo)
+fiorellino|a|fiore + -ellino (diminutivo)
+cagnolino|a|cane + -olino (diminutivo)
+tavolino|a|tavolo + -ino (diminutivo)
+manina|a|mano + -ina (diminutivo)
+gattone|a|gatto + -one (accrescitivo)
+nasone|a|naso + -one (accrescitivo)
+parolaccia|a|parola + -accia (peggiorativo)
+tempaccio|a|tempo + -accio (peggiorativo)
+ragazzone|a|ragazzo + -one (accrescitivo)
+alberello|a|albero + -ello (diminutivo)
+borsetta|a|borsa + -etta (diminutivo)
+coltellaccio|a|coltello + -accio (peggiorativo)
+scatolone|a|scatola + -one (accrescitivo)
+stanzetta|a|stanza + -etta (diminutivo)
+pesciolino|a|pesce + -olino (diminutivo)
+portaombrelli|c|porta + ombrelli
+lavastoviglie|c|lava + stoviglie
+portafoglio|c|porta + foglio
+passaporto|c|passa + porto
+cacciavite|c|caccia + vite
+lungomare|c|lungo + mare
+pomodoro|c|pomo + d'oro
+cassaforte|c|cassa + forte
+francobollo|c|franco + bollo
+arcobaleno|c|arco + baleno
+paracadute|c|para + cadute
+terremoto|c|terra + moto
+salvagente|c|salva + gente
+tagliacarte|c|taglia + carte
+pianoforte|c|piano + forte
+schiaccianoci|c|schiaccia + noci
+capotreno|c|capo + treno`.split('\n'),L={p:'primitivo',a:'alterato',c:'composto'};
 quiz({pools:{x:B},make:s=>{const[w,a,n]=s.split('|');return{q:'<b>'+w+'</b>',n,g:[{o:['primitivo','alterato','composto'],a:L[a]}]}}})
 </script></body></html>
